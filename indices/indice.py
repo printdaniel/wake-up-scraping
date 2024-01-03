@@ -1,13 +1,15 @@
 import requests 
 from bs4 import BeautifulSoup 
 
-
-dolarito = requests.get('https://www.dolarito.ar/')
-
-htmlData = dolarito.content
-
-parserData = BeautifulSoup(htmlData, "html.parser")
+def soup(URL):
+    page = requests.get(URL)
+    soup = BeautifulSoup(page.value,"html.parser")
+    return soup
 
 
-print(htmlData)
-print(parserData.prettify())
+soup = soup('https://www.cronista.com/')
+value = soup.find_all('span', attrs={'class':'value'})
+
+
+for i in value:
+    print(i.text)
