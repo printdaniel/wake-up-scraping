@@ -7,6 +7,7 @@ class Indices_economicos:
 
     def __init__(self) -> None:
         self.cronista = 'https://www.cronista.com/'
+        self.puente = "https://www.puentenet.com/cotizaciones/riesgo-pais"
 
 
     def soup_validator(self, url, timeout=5, headers=None):
@@ -42,6 +43,14 @@ class Indices_economicos:
             if count <= 3:
                 print(f"{monedas[count]} {i.text}")
                 count += 1
+
+    def riesgo_pais(self):
+        soup = self.soup_validator(self.puente)
+        table = soup.find_all('tr')
+        print(table)
+
+        for i in table:
+            print(i.text)
 
     
 
