@@ -46,11 +46,13 @@ class Indices_economicos:
 
     def riesgo_pais(self):
         soup = self.soup_validator(self.puente)
-        table = soup.find_all('tr')
-        print(table)
+        table = soup.find('table')
 
-        for i in table:
-            print(i.text)
+        for fila in table.find_all('tr'):
+            for celda in fila.find_all('td'):
+                contenido_celda = celda.text
+                print(contenido_celda.strip())
+
 
     
 
