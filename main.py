@@ -4,7 +4,7 @@ from indices.indice import Indices_economicos
 
 
 
-dolar = Indices_economicos()
+app = Indices_economicos()
 
 
 
@@ -14,4 +14,4 @@ dolar = Indices_economicos()
 
 
 if __name__ == '__main__':
-    dolar.dolares()
+    app.riesgo_pais()

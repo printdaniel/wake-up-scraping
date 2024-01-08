@@ -1,5 +1,6 @@
 import requests 
 from bs4 import BeautifulSoup 
+from tabulate import tabulate
 
 
 
@@ -8,6 +9,7 @@ class Indices_economicos:
     def __init__(self) -> None:
         self.cronista = 'https://www.cronista.com/'
         self.puente = "https://www.puentenet.com/cotizaciones/riesgo-pais"
+        self.portafolio = "https://www.portfoliopersonal.com/Cotizaciones/Bonos"
 
 
     def soup_validator(self, url, timeout=5, headers=None):
@@ -48,10 +50,50 @@ class Indices_economicos:
         soup = self.soup_validator(self.puente)
         table = soup.find('table')
 
+        # Lista para almacenar las filas de la tabla
+        filas = []
+
         for fila in table.find_all('tr'):
+            # Lista para almacenar las celdas de cada fila
+            celdas = []
+
             for celda in fila.find_all('td'):
-                contenido_celda = celda.text
-                print(contenido_celda.strip())
+                # Extraer el contenido de la celda y eliminar espacios en blanco
+                contenido_celda = celda.text.strip()
+                # Agregar el contenido de la celda a la lista de celdas
+                celdas.append(contenido_celda)
+
+            # Agregar la lista de celdas a la lista de filas
+            filas.append(celdas)
+
+        # Imprimir la tabla formateada
+        print(tabulate(filas, headers='firstrow', tablefmt='grid'))
+
+
+
+    def bonos(self):
+        soup = self.soup_validator(self.portafolio)
+        table = soup.find('table')
+
+        # Lista para almacenar las filas de la tabla
+        filas = []
+
+        for fila in table.find_all('tr'):
+            # Lista para almacenar las celdas de cada fila
+            celdas = []
+
+            for celda in fila.find_all('td'):
+                # Extraer el contenido de la celda y eliminar espacios en blanco
+                contenido_celda = celda.text.strip()
+                # Agregar el contenido de la celda a la lista de celdas
+                celdas.append(contenido_celda)
+
+            # Agregar la lista de celdas a la lista de filas
+            filas.append(celdas)
+
+        # Imprimir la tabla formateada
+        print(tabulate(filas, headers='firstrow', tablefmt='grid'))
+
 
 
     
