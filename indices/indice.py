@@ -35,12 +35,28 @@ class Indices_economicos:
         return soup
 
     def dolares(self):
+        """
+        Método que extrae y muestra información sobre distintas cotizaciones de dólares.
+
+        El método utiliza la biblioteca BeautifulSoup para realizar scraping en un sitio web
+        y encuentra los elementos HTML que contienen la información de las cotizaciones.
+
+        Las cotizaciones se imprimen en la consola junto con el nombre de la moneda correspondiente.
+
+        Este método asume que la estructura del sitio web y las clases HTML utilizadas no cambian
+        de manera significativa.
+
+        :return: No devuelve ningún valor, imprime las cotizaciones en la consola.
+        """
+        # Nombre de las distintas monedas o valores del dólar
         monedas = ["Dolar Blue", "Dolar BNA", "Dolar CCL", "Dolar Tarjeta"]
         count = 0
 
+        # Obtener el contenido HTML y validar con BeautifulSoup
         soup = self.soup_validator(self.cronista)
         value = soup.find_all('span', attrs={'class':'value'})
 
+        # Iterar todos los elementos encontrados
         for i in value:
             if count <= 3:
                 print(f"{monedas[count]} {i.text}")
