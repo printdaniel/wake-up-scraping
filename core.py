@@ -2,8 +2,6 @@ from diccionario import opciones
 from indices.indice import Indices_economicos
 from colorama import init, Fore
 
-
-
 app = Indices_economicos()
 init()
 
@@ -20,6 +18,7 @@ def ejecutar_menu():
         if entrada in list(opciones.keys()):
             opciones[entrada]()
         elif entrada == "exit":
+            print(Fore.BLUE + "Bye")
             break
         else:
-            print("Opción no válida")
+            print(Fore.RED + "Opción no válida")
