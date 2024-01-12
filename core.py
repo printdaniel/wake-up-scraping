@@ -6,7 +6,7 @@ app = Indices_economicos()
 init()
 
 def opciones_menu():
-    print(Fore.RED + "Indices Económicos: Dolares, Bonos, Riesgo")
+    print(Fore.RED + "Indices Económicos: Dolares, Bonos, Riesgo, ipc")
 
 
 def ejecutar_menu():

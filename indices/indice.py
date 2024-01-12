@@ -8,6 +8,7 @@ class Indices_economicos:
         self.cronista = 'https://www.cronista.com/'
         self.puente = "https://www.puentenet.com/cotizaciones/riesgo-pais"
         self.portafolio = "https://www.portfoliopersonal.com/Cotizaciones/Bonos"
+        self.datos_macro_ipc ="https://datosmacro.expansion.com/ipc-paises/argentina"
 
     def _soup_validator(self, url, timeout=5, headers=None):
         """Retorna el HTML parseado o None en caso de error."""
@@ -106,8 +107,6 @@ class Indices_economicos:
 
         # Imprimir la tabla formateada
         print(tabulate(filas, headers='firstrow', tablefmt='grid'))
-
-
 
     
 

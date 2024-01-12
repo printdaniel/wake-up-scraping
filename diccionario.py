@@ -4,6 +4,7 @@ app = Indices_economicos()
 opciones = {
         "dolares": app.dolares,
         "bonos": app.bonos,
-        "riesgo": app.riesgo_pais
+        "riesgo": app.riesgo_pais,
+        "ipc": app.ipc
         }
 
