@@ -1,6 +1,5 @@
 ## WAkE UP Multiscrap
 
-
 ### scraping utilizando Beautifoulsoup4
 
 El propósito de la app es ofrecer multiple cantidad de información de forma
