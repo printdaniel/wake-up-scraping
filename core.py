@@ -7,6 +7,7 @@ init()
 
 def opciones_menu():
     print(Fore.RED + "Indices Económicos: Dolares, Bonos, Riesgo, ipc")
+    print(Fore.BLUE + "Cine: ")
 
 
 def ejecutar_menu():
