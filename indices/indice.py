@@ -1,36 +1,14 @@
 import requests 
 from bs4 import BeautifulSoup 
 from tabulate import tabulate
+from base_parser import BaseParser
 
-
-class Indices_economicos:
+class Indices_economicos(BaseParser):
     def __init__(self) -> None:
         self.cronista = 'https://www.cronista.com/'
         self.puente = "https://www.puentenet.com/cotizaciones/riesgo-pais"
         self.portafolio = "https://www.portfoliopersonal.com/Cotizaciones/Bonos"
         self.datos_macro_ipc ="https://datosmacro.expansion.com/ipc-paises/argentina"
-
-    def _soup_validator(self, url, timeout=5, headers=None):
-        """Retorna el HTML parseado o None en caso de error."""
-        default_headers = {
-            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)'
-        }
-        if headers:
-            default_headers.update(headers)
-
-        try:
-            response = requests.get(url, headers=default_headers, timeout=timeout)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.content, "html.parser")
-            return soup
-
-        except requests.exceptions.RequestException as e:
-            print(f"Error al hacer la solicitud: {e}")
-            return None
-
-        except Exception as e:
-            print(f"Error inesperado: {e}")
-            return None
 
     def dolares(self):
         """
@@ -109,9 +87,3 @@ class Indices_economicos:
         print(tabulate(filas, headers='firstrow', tablefmt='grid'))
 
     
-
-
-
-
-
-

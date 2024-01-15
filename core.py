@@ -6,12 +6,13 @@ app = Indices_economicos()
 init()
 
 def opciones_menu():
-    print(Fore.RED + "Indices Económicos: Dolares, Bonos, Riesgo, ipc")
-    print(Fore.BLUE + "Cine: ")
+    print(Fore.RED + "Indices Económicos: Dolares, Bonos, Riesgo")
+    print(Fore.BLUE + "Cine: Populares,")
 
 
 def ejecutar_menu():
     opciones_menu()
+
     while True:
 
         entrada = input(Fore.YELLOW + "Elige una opción: ").lower()
