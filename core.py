@@ -18,6 +18,8 @@ def ejecutar_menu():
         
         if entrada in list(opciones.keys()):
             opciones[entrada]()
+        elif entrada == "opciones":
+            opciones_menu()
         elif entrada == "exit":
             print(Fore.BLUE + "Bye")
             break
