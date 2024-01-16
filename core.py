@@ -1,4 +1,4 @@
-from diccionario import opciones
+from diccionario import opciones_dict
 from colorama import init, Fore
 
 init()
@@ -15,8 +15,8 @@ def ejecutar_menu():
 
         entrada = input(Fore.YELLOW + "Elige una opción: ").lower()
         
-        if entrada in list(opciones.keys()):
-            opciones[entrada]()
+        if entrada in list(opciones_dict.keys()):
+            opciones_dict[entrada]()
         elif entrada == "opciones":
             opciones_menu()
         elif entrada == "exit":

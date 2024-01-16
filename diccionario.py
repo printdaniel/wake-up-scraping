@@ -1,13 +1,14 @@
 from indices.indice import Indices_economicos
 from cine.cine import Cine
-app = Indices_economicos()
+
+indices = Indices_economicos()
 cine = Cine()
 
-opciones = {
-        "dolares": app.dolares,
-        "bonos": app.bonos,
-        "riesgo": app.riesgo_pais,
+opciones_dict = {
+        "dolares": indices.dolares,
+        "bonos": indices.bonos,
+        "riesgo": indices.riesgo_pais,
         "populares": cine.peliculas_populares,
-        "lanzamientos": cine.lanzamientos
+        "lanzamientos":cine.lanzamientos
         }
 
