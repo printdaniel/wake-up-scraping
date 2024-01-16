@@ -6,6 +6,7 @@ init()
 def opciones_menu():
     print(Fore.RED + "Indices Económicos: Dolares, Bonos, Riesgo")
     print(Fore.BLUE + "Cine: Populares, Lanzamientos")
+    print(Fore.GREEN + "Para salir: exit")
 
 
 def ejecutar_menu():
@@ -15,12 +16,15 @@ def ejecutar_menu():
 
         entrada = input(Fore.YELLOW + "Elige una opción: ").lower()
         
-        if entrada in list(opciones_dict.keys()):
-            opciones_dict[entrada]()
-        elif entrada == "opciones":
-            opciones_menu()
-        elif entrada == "exit":
-            print(Fore.BLUE + "Bye")
-            break
-        else:
-            print(Fore.RED + "Opción no válida")
+        try:
+            if entrada in list(opciones_dict.keys()):
+                opciones_dict[entrada]()
+            elif entrada == "opciones":
+                opciones_menu()
+            elif entrada == "exit":
+                print(Fore.BLUE + "Bye")
+                break
+            else:
+                print(Fore.RED + "Opción no válida")
+        except Exception as e:
+            print(Fore.RED + f"Error inesperado: {e}")
