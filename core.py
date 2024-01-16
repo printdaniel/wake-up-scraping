@@ -1,13 +1,11 @@
 from diccionario import opciones
-from indices.indice import Indices_economicos
 from colorama import init, Fore
 
-app = Indices_economicos()
 init()
 
 def opciones_menu():
     print(Fore.RED + "Indices Económicos: Dolares, Bonos, Riesgo")
-    print(Fore.BLUE + "Cine: Populares,")
+    print(Fore.BLUE + "Cine: Populares, Lanzamientos")
 
 
 def ejecutar_menu():

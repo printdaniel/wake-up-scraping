@@ -8,6 +8,7 @@ class Cine(BaseParser):
 
     def __init__(self) -> None:
         self.populares = "https://www.imdb.com/chart/moviemeter/?ref_=watch_tpks_chtmvm" 
+        self.lanzamientos = "https://www.imdb.com/calendar/?ref_=rlm&region=AR&type=MOVIE"
 
 
     def peliculas_populares(self):
@@ -28,6 +29,13 @@ class Cine(BaseParser):
                     break
         else:
             print("No se encontraron títulos de películas.")
+
+
+    def lanzamientos(self):
+        soup = self._soup_validator(self.lanzamientos)
+
+        content = soup.find_all('a', class_='ipc-metadata-list-summary-itme__t')
+        print(content)
 
 
 
