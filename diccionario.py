@@ -9,6 +9,7 @@ opciones_dict = {
         "bonos": indices.bonos,
         "riesgo": indices.riesgo_pais,
         "populares": cine.peliculas_populares,
-        "lanzamientos":cine.lanzamientos
+        "lanzamientos":cine.lanzamientos,
+        "taquilleras": cine.taquilleras
         }
 

@@ -9,6 +9,7 @@ class Cine(BaseParser):
     def __init__(self) -> None:
         self.populares = "https://www.imdb.com/chart/moviemeter/?ref_=watch_tpks_chtmvm" 
         self.proximamente = "https://www.imdb.com/calendar/?ref_=rlm&region=AR&type=MOVIE"
+        self.taquilleras_url = "https://www.imdb.com/chart/boxoffice/?ref_=nv_ch_cht"
 
 
     def peliculas_populares(self):
@@ -43,5 +44,21 @@ class Cine(BaseParser):
         else:
             print("No se encontrarios títulos")
 
+    def taquilleras(self):
+        soup = self._soup_validator(self.taquilleras_url)
+        content = soup.find_all('h3', class_= 'ipc-title__text')
+
+        count = 1
+
+        if content:
+            peliculas_t = [titulo.text for titulo in content]
 
 
+            for title in peliculas_t:
+                print(f"{title}")
+                count += 1
+                if count == 12:
+                    break
+
+        else:
+            print("No se encontraron títulos de películas.")
