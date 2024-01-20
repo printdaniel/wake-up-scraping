@@ -40,7 +40,6 @@ class Cine(BaseParser):
             next = [l.text for l in elementos_a]
             for title in next:
                 print(f"{title}")
-
         else:
             print("No se encontrarios títulos")
 
@@ -49,16 +48,12 @@ class Cine(BaseParser):
         content = soup.find_all('h3', class_= 'ipc-title__text')
 
         count = 1
-
         if content:
             peliculas_t = [titulo.text for titulo in content]
-
-
             for title in peliculas_t:
                 print(f"{title}")
                 count += 1
                 if count == 12:
                     break
-
         else:
             print("No se encontraron títulos de películas.")
