@@ -12,10 +12,12 @@ class Noticias(BaseParser):
     def pagina(self):
 
         soup = self._soup_validator(self.pagina12)
-        content = soup.find_all('a')
+        content_titulos = soup.find_all('a')
+
+        for i in content_titulos:
+            print(i.get_text())
 
 
-        print(content)
 
 
 
