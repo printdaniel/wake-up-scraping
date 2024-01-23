@@ -1,8 +1,10 @@
 from indices.indice import Indices_economicos
 from cine.cine import Cine
+from noticias.noticias import Noticias
 
 indices = Indices_economicos()
 cine = Cine()
+noticas = Noticias()
 
 opciones_dict = {
         "dolares": indices.dolares,
@@ -10,6 +12,8 @@ opciones_dict = {
         "riesgo": indices.riesgo_pais,
         "populares": cine.peliculas_populares,
         "lanzamientos":cine.lanzamientos,
-        "taquilleras": cine.taquilleras
+        "taquilleras": cine.taquilleras,
+        "pagina": noticas.pagina,
+
         }
 
