@@ -12,7 +12,6 @@ class Noticias(BaseParser):
 
 
     def pagina(self):
-
         soup = self._soup_validator(self.pagina12)
         content_titulos = soup.find_all('a')
 
@@ -21,7 +20,6 @@ class Noticias(BaseParser):
 
 
     def info_bae(self):
-
         soup = self._soup_validator(self.infbae)
         content_titulos = soup.find_all('div', class_='story-card-info')
         for i in content_titulos:
@@ -36,6 +34,3 @@ class Noticias(BaseParser):
                 print(i.find('p').get_text())
         except AttributeError :
             print("\n")
-
-
-

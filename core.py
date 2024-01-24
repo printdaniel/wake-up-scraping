@@ -1,15 +1,19 @@
 from diccionario import opciones_dict
 from colorama import init, Fore
+from tabulate import tabulate
 
 init()
 
 def opciones_menu():
-    print(Fore.RED + "Indices Económicos: Dolares, Bonos, Riesgo")
-    print(Fore.BLUE + "Cine: Populares, Lanzamientos, Taquilleras")
-    print(Fore.BLUE + "Noticias: Pagina, Infobae , Tiempo")
-    print(Fore.GREEN + "Para salir: exit")
-
-
+    menu_options = [
+        [Fore.RED + "Indices Económicos", "Dolares, Bonos, Riesgo"],
+        [Fore.BLUE + "Cine", "Populares, Lanzamientos, Taquilleras"],
+        [Fore.YELLOW + "Noticias", "Pagina, Infobae, Tiempo"],
+        [Fore.GREEN + "Para salir", "exit"]
+    ]
+    table = tabulate(menu_options, headers=["Categoría", "Opciones"], tablefmt="fancy_grid")
+    print(table)
+   
 def ejecutar_menu():
     opciones_menu()
 
