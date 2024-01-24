@@ -14,6 +14,7 @@ opciones_dict = {
         "lanzamientos":cine.lanzamientos,
         "taquilleras": cine.taquilleras,
         "pagina": noticas.pagina,
-        "infobae": noticas.info_bae
+        "infobae": noticas.info_bae,
+        "tiempo": noticas.tiempo_titulos
         }
 

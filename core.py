@@ -6,6 +6,7 @@ init()
 def opciones_menu():
     print(Fore.RED + "Indices Económicos: Dolares, Bonos, Riesgo")
     print(Fore.BLUE + "Cine: Populares, Lanzamientos, Taquilleras")
+    print(Fore.BLUE + "Noticias: Pagina, Infobae , Tiempo")
     print(Fore.GREEN + "Para salir: exit")
 
 
