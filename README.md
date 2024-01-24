@@ -9,9 +9,9 @@ automática que yo considero esencial para mantenerse informado durante el día
 
 | Indices Económicos| Cine         | Diarios      |
 |-------------------|--------------|--------------|
-| Dólares           | Pouplares    | Celda 1,3    |
-| Bonos             | Lanzamientos | Celda 2,3    |
-| Riesgo            | Taquilleras  | Celda 3,3    |
+| Dólares           | Pouplares    | Pagina       |
+| Bonos             | Lanzamientos | Infobae      |
+| Riesgo            | Taquilleras  | Tiempo       |
 
 ## Modo de uso
 
