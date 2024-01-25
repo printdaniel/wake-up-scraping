@@ -18,6 +18,8 @@ opciones_dict = {
         "pagina": noticas.pagina,
         "infobae": noticas.info_bae,
         "tiempo": noticas.tiempo_titulos,
-        "meteored": clima.meteored
+        "meteored": clima.meteored,
+        "acuweather": clima.accuweather,
+        "infoclima": clima.infoclima
         }
 
