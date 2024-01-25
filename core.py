@@ -9,6 +9,7 @@ def opciones_menu():
         [Fore.RED + "Indices Económicos", "Dolares, Bonos, Riesgo"],
         [Fore.BLUE + "Cine", "Populares, Lanzamientos, Taquilleras"],
         [Fore.YELLOW + "Noticias", "Pagina, Infobae, Tiempo"],
+        [Fore.MAGENTA + "Clima", "Meteored, Acuweather, Infoclima"],
         [Fore.GREEN + "Para salir", "exit"]
     ]
     table = tabulate(menu_options, headers=["Categoría", "Opciones"], tablefmt="fancy_grid")
