@@ -9,11 +9,11 @@ trabajo.
 
 ![Wake Up app](wakeup.jpg)
 
-| Indices Económicos| Cine         | Diarios      |
-|-------------------|--------------|--------------|
-| Dólares           | Pouplares    | Pagina       |
-| Bonos             | Lanzamientos | Infobae      |
-| Riesgo            | Taquilleras  | Tiempo       |
+| Indices Económicos| Cine         | Diarios      | Clima         |
+|-------------------|--------------|--------------| --------------|
+| Dólares           | Pouplares    | Pagina       | meteored      |
+| Bonos             | Lanzamientos | Infobae      | acuweather    |
+| Riesgo            | Taquilleras  | Tiempo       | infoclima     |
 
 ## Modo de uso
 
