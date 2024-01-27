@@ -8,7 +8,13 @@ Cada una de ellas se basa en paǵinas que consulto asidumante durante un día du
 trabajo.
 
 ![Wake Up app](wakeup.jpg)
+
+
+##  Estructura
+
 ![Estructura](estructura.png)
+
+##  Contenido
 
 | Indices Económicos| Cine         | Diarios      | Clima         |
 |-------------------|--------------|--------------| --------------|
