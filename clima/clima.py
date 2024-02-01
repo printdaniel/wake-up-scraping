@@ -41,7 +41,16 @@ class Clima(BaseParser):
         print("Estado: ",self.accuweather_e)
 
     def infoclima(self):
-        """Retorna el estado y la temperatura según el sitio Info Clima"""
+        """
+        Retorna el estado y la temperatura según el sitio Info Clima.
+        Utiliza la información de la URL de Info Clima para obtener el estado 
+        y la temperatura actual, y muestra los resultados en la consola.
+
+        Returns
+        -------
+        None
+            No hay un valor de retorno específico.
+        """
         sopa = self._soup_validator(self._infoclima)
         temp_data = sopa.find_all('div',attrs={'class':'d1'})
         estado_data = sopa.find_all('div',attrs={'d1'})
@@ -54,6 +63,7 @@ class Clima(BaseParser):
         for e in estado_data:
             self.infoClima_e = e.text.replace('\n','')
             break
+
         print(f"Temperatura {self.infoClima_t}")
         print("Estado: ",self.infoClima_e)
 

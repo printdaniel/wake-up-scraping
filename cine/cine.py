@@ -55,6 +55,18 @@ class Cine(BaseParser):
             print("No se encontrarios títulos")
 
     def taquilleras(self):
+        """
+        Muestra los títulos de películas taquilleras.
+
+        Utiliza la información de la URL de películas taquilleras
+        y muestra los títulos disponibles en la consola.
+
+        Returns
+        -------
+        None
+            No hay un valor de retorno específico.
+
+        """
         soup = self._soup_validator(self.taquilleras_url)
         content = soup.find_all('h3', class_= 'ipc-title__text')
 
