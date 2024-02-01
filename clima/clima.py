@@ -10,7 +10,16 @@ class Clima(BaseParser):
 
 
     def meteored(self):
-        """ Retorna el estado y temperatura según el sitio meteored"""
+        """ 
+        Retorna el estado y la temperatura según el sitio Meteored.
+        Utiliza la información de la URL de Meteored para obtener el estado y la temperatura actual,
+        y muestra los resultados en la consola.
+
+        Returns
+        -------
+        None
+            No hay un valor de retorno específico.
+        """
         soup = self._soup_validator(self._meteored)
         temp_data = soup.find_all('span',attrs={'class':'dato-temperatura changeUnitT'})
         estado_data = soup.find_all('span',attrs={'descripcion'})
