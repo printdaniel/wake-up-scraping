@@ -33,6 +33,17 @@ class Cine(BaseParser):
 
 
     def lanzamientos(self):
+        """
+        Muestra los títulos de lanzamientos próximos.
+
+        Utiliza la información de la URL de próximos lanzamientos
+        y muestra los títulos disponibles en la consola.
+
+        Returns
+        -------
+        None
+            No hay un valor de retorno específico.
+        """
         soup = self._soup_validator(self.proximamente)
         elementos_a = soup.find_all('a', class_='ipc-metadata-list-summary-item__t')
 
