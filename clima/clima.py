@@ -25,7 +25,16 @@ class Clima(BaseParser):
 
 
     def accuweather(self):
-        """ Retorna el estado y temperatura según el sitio Accuweather"""
+        """ 
+        Retorna el estado y la temperatura según el sitio Accuweather.
+        Utiliza la información de la URL de Accuweather para obtener el estado y la temperatura actual,
+        y muestra los resultados en la consola.
+
+        Returns
+        -------
+        None
+            No hay un valor de retorno específico.
+        """
         sopa = self._soup_validator(self._acuweather)
         temp_data = sopa.find_all('div',attrs={'class':'temp'})
         estado_data = sopa.find_all('div',attrs={'class':'phrase'})
