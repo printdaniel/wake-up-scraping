@@ -84,5 +84,3 @@ class Clima(BaseParser):
 
         print(f"Temperatura {self.infoClima_t}")
         print("Estado: ",self.infoClima_e)
-
-

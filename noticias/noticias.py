@@ -1,4 +1,3 @@
-import requests 
 from bs4 import BeautifulSoup 
 from tabulate import tabulate
 from base_parser import BaseParser
@@ -28,7 +27,7 @@ class Noticias(BaseParser):
 
     def tiempo_titulos(self):
         soup = self._soup_validator(self.tiempo)
-        content_titulos = soup.find_all('div',attrs={'title'})
+        content_titulos = soup.find_all('div', attrs={'title'})
         try:
             for i in content_titulos:
                 print(i.find('p').get_text())
